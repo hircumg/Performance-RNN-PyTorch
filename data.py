@@ -52,6 +52,6 @@ class Dataset:
                     n = 0
     
     def __repr__(self):
-        return (f'Dataset(root="{self.root}", '
-                f'samples={len(self.samples)}, '
-                f'avglen={self.avglen})')
+        return ('Dataset(root="{self.root}"',
+                'samples={len(self.samples)}',
+                'avglen={self.avglen})')

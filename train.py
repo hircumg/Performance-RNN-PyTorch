@@ -183,7 +183,6 @@ print('-' * 70)
 
 print('Loading dataset')
 dataset = load_dataset()
-print(dataset)
 
 print('-' * 70)
 
@@ -244,7 +243,7 @@ try:
             writer.add_scalar('model/loss', loss.item(), iteration)
             writer.add_scalar('model/norm', norm.item(), iteration)
 
-        print(f'iter {iteration}, loss: {loss.item()}')
+        print('iter {%s}, loss: {%s}' %(iteration, loss.item()))
 
         if time.time() - last_saving_time > saving_interval:
             save_model()

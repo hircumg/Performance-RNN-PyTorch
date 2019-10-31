@@ -59,7 +59,7 @@ def transposition(events, controls, offset=0):
     return events, controls
 
 def dict2params(d, f=','):
-    return f.join(f'{k}={v}' for k, v in d.items())
+    return f.join('{'+str(k)+'}={'+str(v)+'}' for k, v in d.items())
 
 def params2dict(p, f=',', e='='):
     d = {}
